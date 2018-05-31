@@ -1,0 +1,39 @@
+{
+  "version": "5.0.0-beta.44",
+  "network": "regtest",
+  "port": 3001,
+  "services": [
+    "address",
+    "block",
+    "db",
+    "fee",
+    "header",
+    "mempool",
+    "p2p",
+    "timestamp",
+    "transaction",
+    "web",
+    "insight-api",
+    "insight-ui"
+  ],
+  "datadir": "./data",
+  "servicesConfig": {
+    "insight-api": {
+      "p2p": {
+        "peers": [
+          {
+            "ip": { "v4": "127.0.0.1" },
+            "port": 48444
+          }
+        ]
+      },
+      "routePrefix": "api",
+      "cwdRequirePath": "insight-api"
+    },
+    "insight-ui": {
+      "apiPrefix": "api",
+      "routePrefix": "",
+      "cwdRequirePath": "insight-ui"
+    }
+  }
+}

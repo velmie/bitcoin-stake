@@ -1,0 +1,29 @@
+{
+  "version": "5.0.0-beta.44",
+  "network": "regtest",
+  "port": 3002,
+  "services": [
+    "address",
+    "block",
+    "db",
+    "fee",
+    "header",
+    "mempool",
+    "p2p",
+    "timestamp",
+    "transaction",
+    "web"
+  ],
+  "datadir": "./data",
+  "servicesConfig": {
+    "insight-api": {
+      "routePrefix": "api",
+      "cwdRequirePath": "insight-api"
+    },
+    "insight-ui": {
+      "apiPrefix": "api",
+      "routePrefix": "",
+      "cwdRequirePath": "insight-ui"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+bench/
+bin/cli
+bin/node
+bin/spvnode
+bin/wallet
+browser/server.js
+browser/wsproxy.js
+lib/
+migrate/
+scripts/
+test/
+webpack/
+webpack.browser.js
+webpack.compat.js
+webpack.node.js

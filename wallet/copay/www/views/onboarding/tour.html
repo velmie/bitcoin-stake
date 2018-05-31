@@ -1,0 +1,42 @@
+<ion-view class="onboarding" id="onboarding-tour">
+  <ion-nav-bar>
+    <ion-nav-title></ion-nav-title>
+    <ion-nav-buttons side="primary">
+      <button class="button back-button button-clear" ng-click="goBack()">
+        <i class="icon ion-ios-arrow-thin-left"></i>
+      </button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="secondary">
+      <button class="button back-button button-clear" ng-show="data.index == 0" ng-click="createDefaultWallet()">
+        {{'Skip' | translate}}
+      </button>
+    </ion-nav-buttons>
+  </ion-nav-bar>
+  <ion-slides class="slides" options="options" slider="data.slider">
+    <ion-slide-page>
+      <ion-content id="onboard-tour-secure" scroll="false">
+        <div class="onboarding-topic" translate>Bitcoin Stake is secure digital money.</div>
+        <div class="onboarding-description" translate>You can spend bitcoin at millions of websites and stores worldwide.</div>
+        <div class="onboarding-illustration-secure"></div>
+        <div class="cta-buttons">
+          <div class="onboarding-tldr" translate>Just scan the code to pay.</div>
+          <button class="button button-standard button-secondary" ng-click="slideNext()" translate>
+            Got it
+          </button>
+        </div>
+      </ion-content>
+    </ion-slide-page>
+    <ion-slide-page>
+      <ion-content id="onboard-tour-control" scroll="false">
+        <div class="onboarding-topic" translate>You control your bitcoin stake.</div>
+        <div class="onboarding-description" translate>This app stores your bitcoin with cutting-edge security.</div>
+        <div class="onboarding-illustration-control"></div>
+        <div class="cta-buttons">
+          <button class="button button-standard button-primary" ng-click="createDefaultWallet()" translate>
+            Create bitcoin stake wallet
+          </button>
+        </div>
+      </ion-content>
+    </ion-slide-page>
+  </ion-slides>
+</ion-view>

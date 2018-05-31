@@ -1,0 +1,20 @@
+{
+  "description": "A full Bitcoin node build with Bitcore",
+  "repository": "https://github.com/user/project",
+  "license": "MIT",
+  "readme": "README.md",
+  "dependencies": {
+    "bitcore-lib": "^v5.0.0-beta.1",
+    "bitcore-node": "^5.0.0-beta.44",
+    "insight-api": "^5.0.0-beta.44",
+    "insight-ui": "^0.4.0"
+  },
+  "scripts": {
+    "start": "node ./bitcore-node/bin/bitcore-node -- start",
+    "start-reg": "npm run clean && node ./bitcore-node/bin/bitcore-node -- start",
+    "debug": "sudo pgrep bitcore | xargs kill -9; node inspect ./bitcore-node/bin/bitcore-node -- start",
+    "cli": "node inspect ./bcoin/bin/cli --config ./data/bcoin.conf",
+    "clean": "rm -rf data/regtest data/debug.log data/hosts.json data/chain.ldb",
+    "gen": "./generate.sh"
+  }
+}

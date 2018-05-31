@@ -1,0 +1,5 @@
+cd node_modules
+rm -rf bitcore-lib bitcore-p2p bcoin
+ln -s ../../bitcore-lib bitcore-lib
+ln -s ../../bitcore-p2p bitcore-p2p
+ln -s ../../bcoin bcoin

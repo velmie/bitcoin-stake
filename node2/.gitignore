@@ -1,0 +1,8 @@
+node_modules
+data/chain.ldb
+data/debug.log
+data/hosts.json
+data/regtest
+data/chain.ldb
+data/debug.log
+data/testnet
